@@ -1,26 +1,40 @@
-DQN on Space Invaders
+# DQN Space Invaders Agent
 
-The initial DQN Pong notebook is modified for the Space Invaders Atari environment in this project.  
-Two brief gaming movies that demonstrate the agent's development from early random play to later better conduct are shown.
+A reinforcement-learning project exploring how a Deep Q-Network learns to play Atari Space Invaders through reward-based interaction.
 
-Videos:
-Early training (near-random policy):  
-<video src="early_spaceinvaders.mp4" controls width="480"></video>
+## Project Overview
 
-Later training (after brief training):  
-<video src="later_spaceinvaders.mp4" controls width="480"></video>
+This academic project adapted a Deep Q-Network workflow for the Space Invaders environment. The agent learned through repeated gameplay using reinforcement-learning techniques such as:
 
-Reflection:
-Compared to some other Atari games, Space Invaders has a clear purpose and more regular rewards, which is why I selected it.  
- This helps illustrate how the agent picks up fundamental methods and makes it simpler to see progress following a brief training run.
+- Experience replay
+- Epsilon-greedy exploration
+- Reward-based policy learning
+- Iterative policy optimization
+- Neural-network action-value estimation
 
- The spy walks and shoots largely at random in the first segment, missing the majority of targets and rapidly losing life.  
- The agent moves with a little more purpose after some training, frequently situating itself beneath the aliens and striking them more frequently in the subsequent clip.
+## Training Demonstration
 
- The fact that there are still not many rewards—the spy must learn that shooting aliens earns points—was one difficulty.  
- This made the initial learning process slower.
+### Early Training
 
- 
-Additionally, I observed that the agent may further refine its approach and become more stable with additional training steps, a slower epsilon decay, and perhaps a bigger replay buffer.
+The agent behaves mostly randomly, misses targets frequently, and loses lives quickly.
 
- Overall, the experiment demonstrates that a brief training run is sufficient to yield observable behavioral improvements in the agent.
+[View early training video](assets/early_training.mp4)
+
+### Later Training
+
+After additional training, the agent moves more purposefully, positions itself beneath enemies, and hits targets more consistently.
+
+[View later training video](assets/later_training.mp4)
+
+## Observations
+
+The later gameplay demonstrates visible behavioral improvement compared with the initial policy. Longer training, slower epsilon decay, and a larger replay buffer could further improve stability and performance.
+
+## Repository Structure
+
+```text
+.
+├── assets/
+│   ├── early_training.mp4
+│   └── later_training.mp4
+└── README.md
